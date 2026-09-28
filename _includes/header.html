@@ -2,18 +2,18 @@
 
   <div class="wrapper">
     <div class="site-identity">
-      <a href="{{ "/" | relative_url }}"><img src="{{ "/assets/profile-small.jpg" | relative_url }}" alt="{{ site.title | escape }}"></a>
+      <a href="{{ "/" | relative_url }}"><img src="{{ "/assets/profile.svg" | relative_url }}" alt="{{ site.title | escape }}"></a>
       <div class="site-identity-text">
         <a class="site-title" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
-        <p>PhD Student, University of Cambridge</p>
-        <p><a href="mailto:ljvm2@cam.ac.uk">ljvm2@cam.ac.uk</a></p>
+        <p>{{ site.tagline | escape }}</p>
+        <p><a href="{{ site.profile_url }}">{{ site.profile_label | escape }}</a></p>
         <nav class="site-nav">
-          <a class="page-link" href="/about/">About</a> &middot;
-          <a class="page-link" href="/life/">Life</a> &middot;
-          <a class="page-link" href="/research/">Research</a> &middot;
-          <a class="page-link" href="/projects/">Projects</a> &middot;
-          <a class="page-link" href="/notebook/">Notebook</a>
-          <!-- <a class="page-link" href="/filipino-nlp/">Filipino NLP</a> -->
+          <a class="page-link" href="{{ '/about/' | relative_url }}">About</a> &middot;
+          <a class="page-link" href="{{ '/life/' | relative_url }}">Life</a> &middot;
+          <a class="page-link" href="{{ '/research/' | relative_url }}">Research</a> &middot;
+          <a class="page-link" href="{{ '/projects/' | relative_url }}">Projects</a> &middot;
+          <a class="page-link" href="{{ '/notebook/' | relative_url }}">Notebook</a>
+          <!-- <a class="page-link" href="{{ '/filipino-nlp/' | relative_url }}">Filipino NLP</a> -->
         </nav>
       </div>
     </div>

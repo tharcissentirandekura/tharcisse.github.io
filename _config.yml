@@ -13,21 +13,22 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Lj V. Miranda
-email: ljvmiranda@gmail.com
+title: Tharcisse
+author: Tharcisse
+tagline: Projects, notes, and ideas
+profile_url: https://github.com/tharcissentirandekura
+profile_label: github.com/tharcissentirandekura
 description: > # this means to ignore newlines until "baseurl:"
   A collection of notes, projects, and essays.
-timezone: Asia/Manila
+timezone: America/New_York
 # Link settings
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://ljvmiranda921.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/tharcisse.github.io" # the subpath of your site, e.g. /blog
+url: "https://tharcissentirandekura.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 permalink: pretty
 
 # Social settings
 social_sites:
-  github: ljvmiranda921
-  # twitter: ljvmiranda921
-  scholar: 2RtnNKEAAAAJ
+  github: tharcissentirandekura
 
 rss: rss
 
@@ -59,7 +60,7 @@ highlighter: rouge
 #  shortname: ljvmiranda921-github-io-1
 
 # Google analytics
-google_analytics: UA-106021948-1
+analytics_enabled: false
 
 # Publish future
 future: false
@@ -72,7 +73,23 @@ future: false
 #- /projects/index.md
 
 # Include this line so that travis will not explode
-exclude: [vendor]
+exclude:
+  - vendor
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - AGENTS.md
+  - notebook/_posts
+  - projects/_posts
+  - life/_posts
+  - filipino-nlp.md
+  - srcf
+  - keybase.txt
+  - googled00b2374bf121c64.html
+  - frontmatter.json
+  - assets/profile-small.jpg
+  - assets/header.png
+  - assets/favicon.ico
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.

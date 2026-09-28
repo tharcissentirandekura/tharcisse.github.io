@@ -1,57 +1,38 @@
-# ljvmiranda921.github.io
+# tharcisse.github.io
 
-[![Deploy Jekyll site to Pages](https://github.com/ljvmiranda921/ljvmiranda921.github.io/actions/workflows/pages.yml/badge.svg)](https://github.com/ljvmiranda921/ljvmiranda921.github.io/actions/workflows/pages.yml)
-[![License: CC BY 4.0](https://img.shields.io/badge/license-CC%20BY%204.0-blue.svg)](https://creativecommons.org/licenses/by/4.0/)
+Tharcisse's personal website, built with Jekyll and published through GitHub Pages.
 
-This is the source code for my [blog](https://ljvmiranda921.github.io). It's a
-static website powered by [Jekyll](https://jekyllrb.com/) with site analytics
-done via [plausible.io](https://plausible.io/ljvmiranda921.github.io) (private,
-cookie-free and open source).
+## Local preview
 
-## Set-up
+Use Ruby 3.3.5 (see `.ruby-version`) and Bundler 4.0.16:
 
-We pin the Ruby version in [`.ruby-version`](.ruby-version), so we can 
-easily match it with [rbenv](https://github.com/rbenv/rbenv):
-
-```shell
-# macOS with Homebrew (on Linux, install rbenv via your package manager)
-brew install rbenv ruby-build
-echo 'eval "$(rbenv init - zsh)"' >> ~/.zshrc && exec zsh
-```
-
-Then clone the repo and let rbenv grab the pinned Ruby, along with
-[bundler](https://bundler.io/):
-
-```shell
-git clone https://github.com/ljvmiranda921/ljvmiranda921.github.io.git
-cd ljvmiranda921.github.io/
-rbenv install   # reads .ruby-version
-gem install bundler
-```
-
-Finally, build the dependencies and call `jekyll serve`:
-
-```shell
+```sh
+gem install bundler -v 4.0.16
 bundle install
-bundle exec jekyll serve --livereload
+bundle exec jekyll serve
 ```
 
-The page, by default, should be running at [localhost:4000](localhost:4000)
+Open <http://localhost:4000>. To check a production build, run `bundle exec jekyll build --trace`.
 
-## Citations and references
+## Deploy to GitHub Pages
 
-The site uses [`jekyll-scholar`](https://github.com/inukshuk/jekyll-scholar) with
-the Association for Computational Linguistics citation style.
-References are stored as BibTeX files under `_bibliography`, and rendered from
-each post via:
+1. Push this repository to `tharcissentirandekura/tharcisse.github.io` on `main` or `master`.
+2. In the repository's **Settings → Pages → Build and deployment**, choose **GitHub Actions**.
+3. The **Deploy Jekyll site to Pages** workflow builds and deploys the site. It can also be run manually from **Actions**.
 
-```liquid
-{% bibliography --file notebook/<post-slug>.bib %}
-```
+The site URL is <https://tharcissentirandekura.github.io/tharcisse.github.io/>. The daily workflow uses the same deployment workflow and requires no personal access token.
 
-## Contribute
+## Content
 
-If you found some errors in spelling/grammar, mistakes in content and the like, then feel
-free to fork this repository and [make a Pull Request!](https://help.github.com/articles/creating-a-pull-request/)
+- `_config.yml`: name, tagline, profile link, and site URL.
+- `about/index.md` and `research/index.md`: biography and research content.
+- `_layouts/home.html`: homepage introduction; preserve its markup and styles when editing copy.
+- `news.md`: homepage updates.
+- `_posts/`: new posts, with `category: life`, `notebook`, or `projects`.
+- `assets/profile.svg`: provisional initial avatar; replace with a personal image when available.
 
-[![licensebuttons by](https://licensebuttons.net/l/by/3.0/88x31.png)](https://creativecommons.org/licenses/by/4.0)
+The inherited author's posts remain in their original folders but are excluded from the published site. Their publications, account integrations, and verification files are not presented as Tharcisse's work.
+
+## Attribution
+
+Adapted from [Lj V. Miranda's website](https://github.com/ljvmiranda921/ljvmiranda921.github.io). The original design and source content are credited to Lester James V. Miranda under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). This adaptation changes personal content and deployment configuration while preserving the layout.
